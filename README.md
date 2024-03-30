@@ -1,4 +1,4 @@
-# boe-digestor
+# Boe Digestor
 
 Aplicación que resume pdfs del BOE.
 
@@ -10,7 +10,7 @@ Mediante la integración con el API de Claude Haiku, se ha creado una aplicació
 
 El Boletín Oficial del Estado (BOE) es el diario oficial del Estado español y el medio de difusión de las leyes, disposiciones y actos de las administraciones públicas.
 
-# ¿Qué es el Boe-Digestor?
+# ¿Qué es el Boe Digestor?
 
 Es una aplicación que permite resumir los pdfs del BOE. Para ello, se ha integrado con el API de Claude Haiku, que permite resumir textos.
 

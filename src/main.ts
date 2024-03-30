@@ -13,9 +13,11 @@ const downloadPdf = async (url: string) => {
   const response = await axios.get(url, {
     responseType: "arraybuffer",
     headers: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
-      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8'
-    }
+      "User-Agent":
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+      Accept:
+        "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    },
   });
   return response.data;
 };
@@ -39,7 +41,19 @@ const message = async (content: string): Promise<string> => {
       "<sections>Numbered list of the sections of the file with its title</sections>",
       "Answer always in spanish and using a language for non-experts and non-lawyers.",
     ].join(" "),
-    messages: [{ role: "user", content }],
+    messages: [
+      {
+        role: "user",
+        content: [
+          '<document index="1">',
+          "<source>https://boe.es/boe/dias/2024/03/30/pdfs/BOE-S-2024-79.pdf</source>",
+          "<document_content>",
+          content,
+          "</document_content>",
+          "</document>",
+        ].join("\n"),
+      },
+    ],
   });
 
   return response.content[0].text;
@@ -50,9 +64,13 @@ const run = async () => {
   const pdfBuffer = await downloadPdf(pdfUrl);
   const pdfText = await parsePdf(pdfBuffer);
   const answer = await message(pdfText);
-  fs.writeFileSync(path.join(__dirname, "..", "output", "BOE-S-2024-79.xml"), answer, {
-    encoding: "utf-8",
-  });
+  fs.writeFileSync(
+    path.join(__dirname, "..", "output", "BOE-S-2024-79.xml"),
+    answer,
+    {
+      encoding: "utf-8",
+    }
+  );
 };
 
 run();

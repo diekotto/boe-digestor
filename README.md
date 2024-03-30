@@ -4,7 +4,7 @@ Aplicación que resume pdfs del BOE.
 
 # ;TLDR;
 
-Mediante la integración con el API de Claude Haiku, se ha creado una aplicación que permite resumir los pdfs del BOE.
+Mediante la integración con el API de Claude AI, se ha creado una aplicación que permite resumir los pdfs del BOE.
 
 # ¿Qué es el BOE?
 

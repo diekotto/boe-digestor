@@ -29,3 +29,11 @@ Para usar la aplicación, se debe ejecutar el siguiente comando:
 ```bash
 yarn start
 ```
+
+# Patrones de publicación web del BOE
+
+### Vamos a analizar los sumarios del BOE, no los pdfs individuales.
+
+Las url de los sumarios del BOE siguen el siguiente patrón:
+
+> https://boe.es/boe/dias/\<year\>/\<month\>/\<day\>/pdfs/BOE-S-\<year\>-\<count\>.pdf

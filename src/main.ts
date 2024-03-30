@@ -39,6 +39,7 @@ const message = async (content: string): Promise<string> => {
       "<remarkable>If there is something remarkable, mention it.</remarkable>",
       "<further_information>If it seems pertinent, recommend asking for more information on the points or topics you consider relevant.</further_information>",
       "<sections>Numbered list of the sections of the file with its title</sections>",
+      "Check the sections well, categorizing is important.",
       "Answer always in spanish and using a language for non-experts and non-lawyers.",
     ].join(" "),
     messages: [
@@ -46,7 +47,7 @@ const message = async (content: string): Promise<string> => {
         role: "user",
         content: [
           '<document index="1">',
-          "<source>https://boe.es/boe/dias/2024/03/30/pdfs/BOE-S-2024-79.pdf</source>",
+          "<source>BOE</source>",
           "<document_content>",
           content,
           "</document_content>",

@@ -19,7 +19,7 @@ Es una aplicación que permite resumir los pdfs del BOE. Para ello, se ha integr
 Para instalar la aplicación, se debe clonar el repositorio y ejecutar el siguiente comando:
 
 ```bash
-pip install -r requirements.txt
+yarn install
 ```
 
 # Uso
@@ -27,5 +27,5 @@ pip install -r requirements.txt
 Para usar la aplicación, se debe ejecutar el siguiente comando:
 
 ```bash
-python src/main.py
+yarn start
 ```

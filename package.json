@@ -1,0 +1,21 @@
+{
+  "name": "boe-digestor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:diekmrcoin/boe-digestor.git",
+  "author": "Diego Maroto <diego.diemg@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/main.js",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.19.1",
+    "dotenv": "^16.4.5"
+  }
+}

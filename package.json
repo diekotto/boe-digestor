@@ -7,6 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.12.2",
+    "@types/pdf-parse": "^1.1.4",
     "typescript": "^5.4.3"
   },
   "scripts": {
@@ -16,6 +17,8 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.19.1",
-    "dotenv": "^16.4.5"
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
+    "pdf-parse": "^1.1.1"
   }
 }
